@@ -1,0 +1,91 @@
+
+        * {
+
+            box-sizing: border-box;
+            
+            font-size: small;
+            text-transform: capitalize;
+            text-align: center;
+        }
+
+        /* .container {
+            width: 100%;
+            margin: auto;
+
+        } */
+
+        .sample {
+            margin: auto;
+            /* width:100%; */
+            height: 100px;
+            margin:0px  20px;
+            
+            background-color: yellowgreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .heading {
+            height: 100px;
+            margin:0px  20px;
+            background-color: whitesmoke;
+            font-family: system-ui;
+            color: blue;
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+            align-items: center;
+
+
+        }
+
+        .elements {
+            margin: auto;
+            margin:0px  20px;
+            height: 150px;
+            background-color: yellowgreen;
+        }
+
+        .divs {
+            margin: auto;
+            width: 400px;
+            height: 150px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .c1 {
+            background-color: blueviolet;
+            height: 100px;
+            width: 100px;
+            border: 5px solid yellow;
+        }
+
+        .c2 {
+            /* background-color: blueviolet; */
+            border: 10px solid yellowgreen;
+            height: 100px;
+            width: 100px;
+            border: 5px solid red;
+            background-color: whitesmoke;
+        }
+
+        .c3 {
+            background-color: rgba(236, 12, 236, 0.5);
+            height: 100px;
+            width: 100px;
+            text-align: center;
+        }
+
+        .b {
+            border: 5px solid blue;
+            height: 50px;
+            width: 100%;
+            margin: auto;
+            padding-top: 10px;
+            /* text-align: center; */
+        }
+    
