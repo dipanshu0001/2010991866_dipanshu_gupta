@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function givenumber(){
+        let n1=document.getElementById('balls').value;
+        let person=document.getElementById('persons').value;
+        document.getElementById("display").innerHTML="each member will get :->"+Math.trunc(n1/person) +" balls and left balls:-> " + (n1%person);
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="balls">
+    <input type="number" id="persons">
+    <button onclick="givenumber()"> click </button>
+    <p id="display"></p>
+    
+</body>
+</html>
