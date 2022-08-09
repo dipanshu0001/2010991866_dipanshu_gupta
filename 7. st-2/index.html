@@ -1,59 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-        const show = (event) => {
-            // event.target.preventdefault;
-            let val = document.getElementById('input_value').value;
-            console.log(val);
-            let h = 0;
-            if(val.length>5){alert("length of number is greater than 5");}
-            else if(val.length===0){alert("length number is empty");}
-            else{
-            while (val > 0) {
-                h += val % 10;
-                val = Math.trunc(val / 10);
-
-            }
-            console.log(h);
-            h *= 10;
-            let square = document.getElementById("square");
-            square.style.height = `${h}px`;
-            square.style.width = `${h}px`;
-            square.style.background = "red";
-            square.style.transition = "3s all ease-out";}
+      const show = (event) => {
+        let val = document.getElementById("input_value").value;
+        var inValid = /\s/;
+        let k = inValid.test(val);
+        console.log(typeof(val));
+        let h = 0;
+        val=val.trim();
+        if (val.length > 5) {
+          alert("length of number is greater than 5");
+        } else if (k) {
+          alert("length number is empty");
+        } else {
+            
+          while (val > 0) {
+            h += val % 10;
+            val = Math.trunc(val / 10);
+          }
+          // console.log(h);
+          h *= 10;
+          let j=h/50;
+          let square = document.getElementById("square");
+          document.body.style.background=`linear-gradient(to right, rgb(199, 210, 254), rgb(254, 202, 202), rgb(254, 249, 195))`;
+          document.body.style.transition="3s all ease-out";
+          square.style.height = `${h}px`;
+          square.style.width = `${h}px`;
+          square.style.background = `linear-gradient(to right, rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234))`;
+          square.style.display="block";
+          square.style.color="white";
+          square.style.border=`${j}px solid cyan`;
+          square.style.boxShadow="5px 5px 2px gray ";
+          square.style.borderRadius=`${j*10}px`;
+          square.style.borderColor = "green";
+          document.getElementById("width").innerText+=h;
+          document.getElementById("width").style.color="orange";
+          document.getElementById("average").innerText+=j*10;
+          document.getElementById("average").style.color="orange";  
         }
+      };
     </script>
     <style>
-        #square {
-            margin: auto;
-            height: 0px;
-            width: 0px;
-        }
-        #input_value {
-            border-radius: 5px;
-            width: 400px;
-            height: 50px;
-        }
-        #display{
-            margin:10px 100px;
-        }
+        body{margin: auto;}
+      #square {
+        margin: auto;
+        height: 10px;
+        width: 10px;
+        color: transparent;
+        overflow:hidden;
+        text-align: center;
+        transition :4s width ease-out,4s height ease-out;
+        /* box-shadow:5px 5px 2px 2px gray; */
+      }
+      #input_value {
+        border-radius: 5px;
+        padding:10px 30px;
+        margin: auto;
+        text-align: center;
+      }
+      #display {
+        margin:auto;
+        width:50%;
+        text-align: center;
+        
+      }
+      #heading{
+        text-align: center;
+      }
+      #show_div{
+        margin: auto;
+        width:50%;
+        text-align: center;
+      }
+      #show{
+        padding:0px 30px;
+      }
+      ::placeholder{
+        color: gray;
+      }
+      input:focus{
+        outline: none;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <h1> hellooo world</h1>
+  <body>
+    <h1 id="heading">Enter 5 digit number</h1>
     <div id="display">
-    <input type="text" id="input_value">
+      <input type="text" id="input_value" placeholder="Enter number"/>
+    </div>\
+    <div id="show_div">
+    <button id="show" onclick="show()">click</button>
 </div>
-    <button id="show" onclick="show()"> click</button>
-    <div id="square"></div>
+    <div id="square">
+        <span>height and width of this box is sum of all value into 10 that is: <span id="width"></span>px and border is average of that is: <span id="average"></span>px</span>
+    </div>
     <script src="index.js" class="square"></script>
-</body>
-
+  </body>
 </html>
