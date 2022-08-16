@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(forname){
+            // localStorage.setItem('name',forname);
+            console.log(formname);
+            // let n=document.getElementById("name").value;
+            // console.log(Array.from(formname));
+            // localStorage.setItem("name",JSON.stringify(Array.from(formname)));
+            // Array.from(forname),map(value=>console.log(value.value);)
+            localStorage.setItem("name",formname.name.value);
+            localStorage.setItem("phone",formname.phone.value);
+            return true;
+
+        }
+    </script>
+</head>
+<body>
+    <form 
+    action="form.html"
+    method="get"
+    name="formname"
+    onsubmit="return check(formname)"
+     >
+     <p> Name:<input type="text" name="Name" id="name"></p>
+     <p> Phone NO. <input type="number" name="phone"></p>
+     <input type="submit">
+    
+    </form>
+</body>
+</html>

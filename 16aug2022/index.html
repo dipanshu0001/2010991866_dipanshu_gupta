@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(formname){
+            
+            // this formname have object of name inside its form tag
+            let r=/^\d{10}$/;
+            console.log(formname.phone.value);
+            // console.log(typeof(formname))
+            let name=document.getElementsByName("myname")[0].value;
+            if(formname.myname.value=="" || formname.myname.value==null){
+                alert("Name should be filled cant be empty");
+                return false;
+            }
+            if(formname.phone.value=="" || formname.phone.value==null){
+                alert("Number cant be empty");
+                return false;
+            } 
+            else if(r.test(formname.phone.value)===false){
+                alert("phone shuould equal to 10 digit");
+                formname.phone.focus();
+                return false;
+
+            }
+            else return true;
+        }
+           </script>
+</head>
+<body>
+     <!-- this form name will have object  of name which are inside its fom tag -->
+    <form
+    name="formname" 
+     action="form.html"
+     method="get"
+     onSubmit="return check(formname)"
+    >
+    <p>Name:  <input type="text" name="myname"></p>
+    <p>Phone NO.:  <input type="number" name="phone"></p>
+    <p>
+        <input type="submit" value="Submit">
+        <input type="reset" value="clear">
+    </p>
+</form>
+</body>
+</html>

@@ -4,101 +4,128 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
     <script>
       const show = (event) => {
         let val = document.getElementById("input_value").value;
         var inValid = /\s/;
         let k = inValid.test(val);
-        console.log(typeof(val));
+        console.log(typeof val);
         let h = 0;
-        val=val.trim();
+        val = val.trim();
         if (val.length > 5) {
           alert("length of number is greater than 5");
         } else if (k) {
           alert("length number is empty");
         } else {
-            
           while (val > 0) {
             h += val % 10;
             val = Math.trunc(val / 10);
           }
           // console.log(h);
           h *= 10;
-          let j=h/50;
+          let j = h / 50;
           let square = document.getElementById("square");
-          document.body.style.background=`linear-gradient(to right, rgb(199, 210, 254), rgb(254, 202, 202), rgb(254, 249, 195))`;
-          document.body.style.transition="3s all ease-out";
+          document.body.style.background = `linear-gradient(to right, rgb(199, 210, 254), rgb(254, 202, 202), rgb(254, 249, 195))`;
+          document.body.style.transition = "3s all ease-out";
           square.style.height = `${h}px`;
           square.style.width = `${h}px`;
           square.style.background = `linear-gradient(to right, rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234))`;
-          square.style.display="block";
-          square.style.color="white";
-          square.style.border=`${j}px solid cyan`;
-          square.style.boxShadow="5px 5px 2px gray ";
-          square.style.borderRadius=`${j*10}px`;
+          square.style.display = "block";
+          square.style.color = "white";
+          square.style.border = `${j}px solid cyan`;
+          square.style.boxShadow = "5px 5px 2px gray ";
+          square.style.borderRadius = `${j}px`;
           square.style.borderColor = "green";
-          document.getElementById("width").innerText+=h;
-          document.getElementById("width").style.color="orange";
-          document.getElementById("average").innerText+=j*10;
-          document.getElementById("average").style.color="orange";  
+          document.getElementById("width").innerText += h;
+          document.getElementById("width").style.color = "orange";
+          document.getElementById("average").innerText += j;
+          document.getElementById("average").style.color = "orange";
+          document.getElementById("heading").style.color="black";
         }
       };
     </script>
     <style>
-        body{margin: auto;}
+      body {
+        font-family: "Teko", sans-serif;
+        margin: auto;
+        text-transform: capitalize;
+        background: linear-gradient(
+          to right,
+          #2c5364,
+          #203a43,
+          #0f2027
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+
       #square {
         margin: auto;
         height: 10px;
         width: 10px;
         color: transparent;
-        overflow:hidden;
+        overflow: hidden;
         text-align: center;
-        transition :4s width ease-out,4s height ease-out;
+        transition: 4s width ease-out, 4s height ease-out;
         /* box-shadow:5px 5px 2px 2px gray; */
       }
       #input_value {
         border-radius: 5px;
-        padding:10px 30px;
+        padding: 10px 30px;
         margin: auto;
         text-align: center;
       }
       #display {
-        margin:auto;
-        width:50%;
-        text-align: center;
-        
-      }
-      #heading{
-        text-align: center;
-      }
-      #show_div{
         margin: auto;
-        width:50%;
+        width: 50%;
         text-align: center;
       }
-      #show{
-        padding:0px 30px;
+      #heading {
+        text-align: center;
+        color:azure;
+        text-shadow: 0 0 5px #fff;
       }
-      ::placeholder{
+      #show_div {
+        margin: auto;
+        width: 50%;
+        text-align: center;
+      }
+      #show {
+        padding: 10px 30px;
+        background-color: chartreuse;
+        border-radius: 5px;
+        font-size: larger;
+        font-weight: 500;
+      }
+      ::placeholder {
         color: gray;
       }
-      input:focus{
+      input:focus {
         outline: none;
       }
     </style>
   </head>
 
   <body>
-    <h1 id="heading">Enter 5 digit number</h1>
+    <h1 id="heading">Enter 5 digit number to make a square shape</h1>
     <div id="display">
-      <input type="text" id="input_value" placeholder="Enter number"/>
-    </div>\
+      <input type="text" id="input_value" placeholder="Enter number" />
+    </div>
+    \
     <div id="show_div">
-    <button id="show" onclick="show()">click</button>
-</div>
+      <button id="show" onclick="show()">click</button>
+    </div>
     <div id="square">
-        <span>height and width of this box is sum of all value into 10 that is: <span id="width"></span>px and border is average of that is: <span id="average"></span>px</span>
+      <span
+        >height and width of this box is sum of all value into 10 that is:
+        <span id="width"></span>px and border is average of that is:
+        <span id="average"></span>px</span
+      >
     </div>
     <script src="index.js" class="square"></script>
   </body>
