@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mars{
+            background-image:url('mars.jpg');
+            /* left:50%;
+            top:50%; */
+            /* margin:50px; */
+
+        }
+        .juipter{
+            background-image:url('juipter.jpg');
+        }
+        .saturn{
+            background-image:url('saturn.jpg');
+        }
+        .venus{
+            background-image:url('earth.jpg');
+            bottom: 70%;
+            margin:100px;
+        }
+        .uranus{
+            background-image:url('uranus.jpg');
+        }
+        .earth{
+            
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            height:200px;
+            width:200px;
+            background-size:cover;
+            border-radius: 50%;
+            box-shadow:-20px -20px 50px 5px #000 inset,0px 0px 20px 5px #000;
+            animation:rotate 15s linear alternate infinite;
+        }
+        @keyframes rotate{
+            100%{
+                background-position: 100% ;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="earth mars"></div>
+    <!-- <div class="earth juipter"></div>
+    <div class="earth saturn"></div>
+    <div class="earth venus"></div>  -->
+    <div class="earth venus"></div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+#main_div{
+    margin-top:50px;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+color:white;
+font-size: large;
+text-transform:capitalize;
+}
+*::placeholder{
+    text-transform:capitalize;
+}
+.input_div >input{
+    padding:10px 20px;
+    border-radius: 5px;
+    /* color:cyan; */
+    font-size: medium;
+}
+#submit_btn>button
+{
+    padding:10px 20px;
+    border-radius: 5px;
+    /* color:cyan; */
+    font-size: medium;
+} 
