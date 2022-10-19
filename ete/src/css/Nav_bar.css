@@ -1,0 +1,42 @@
+.Nav_bar-main{
+    display:flex;
+    justify-content: space-between;
+    /* flex-direction:row; */
+    /* flex-direction: row-reverse; */
+    /* */
+}
+
+.img-Navbar div{    height:100px;
+    width: 100px;}
+.img-Navbar{
+    flex:.4;
+    display:flex;
+    justify-content:left;
+    align-items:flex-start;
+    /* background-color: red;  */
+    
+}
+.img-Navbar div >img{
+    width:100%;;
+    height:100%;
+    object-fit:contain;
+
+}
+.links-main{
+    width:60%;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+.links-main a
+{
+    text-decoration: none;
+    /* font-size: 500; */
+    color:black;
+    font-weight:500;
+}
+.links-main a.active{
+    color:green;    
+    font-weight:bolder;
+    font-size: larger;
+}

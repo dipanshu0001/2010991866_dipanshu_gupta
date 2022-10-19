@@ -1,0 +1,233 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.home-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin:10%; */
+    height:80vh;
+    margin:0px 10%;
+    /* background: linear-gradient(to right bottom, rgb(255, 255, 255), rgb(255, 255, 255), rgb(79, 70, 229)); */
+
+}
+.left-main{
+    /* flex:.6; */
+    /* background-color:red;     */
+    height:80%;
+    margin:auto 0px;
+    display: flex;
+    justify-content: space-between;
+    /* border:1px solid yellow;  */
+    flex-direction: column;
+}
+.up{
+    flex:.7;
+    /* border:1px solid green;  */
+    margin:auto 0px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    word-wrap: break-inside;
+    font-weight:bold;
+    /* color:blue; */
+    text-transform:capitalize;
+    text-decoration:wavy;
+    font-size:larger;
+    /* background-color:yellow; */
+
+}
+.up small{
+    color:rgb(3, 218, 3); 
+    font-size:small;
+}
+.largest{
+    font-size: xx-large;
+    font-weight:bolder;
+    transform: scale(1.5    , 2);
+    word-break: break-all;
+    line-height: 1;
+    font-family: 'Georama', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+margin:0px;
+background: -webkit-linear-gradient( rgb(96, 165, 250), rgb(52, 211, 153));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.up button:hover{
+    opacity:0.9;
+}
+.up button{
+    width:50%;
+    margin: 0px auto;
+    border-radius: 50px;
+    background:linear-gradient(to right, rgb(56, 189, 248), rgb(103, 232, 249));
+      opacity: 1;
+      height:60px;
+    transition: opacity 1s;
+}
+.diff{
+    display:inline-block;
+    /* font-size: 72px; */
+  background: -webkit-linear-gradient( rgb(16, 185, 129), rgb(101, 163, 13));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.stars{
+display:flex;
+justify-content:space-around;
+}
+.comp-name{
+    /* margin:0px auto; */
+    display:flex;
+    align-items:center;
+    /* justify-content: center; */
+    font-size: x-large;
+    font-weight: bold;
+}
+.down{
+    display:flex;
+    align-items:start;
+    flex-direction: column;
+}
+.rating{
+    color:gray;
+    font-size: medium;
+}
+.rating a{
+    text-decoration: none;
+    color:green;
+    font-size:larger;
+}
+.rating a:hover{
+    color:blue;
+    font-size: x-large;
+}
+.img-w{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    /* object-fit: contain; */
+}
+.right-l{
+    flex:.3;
+    /* width:60%; */
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    /* background-color:pink; */
+}
+.right-l-1{
+    flex: 0.2;
+    display:flex;
+    justify-content:space-evenly ;
+    background-color:rgba(153, 104, 253,0.7);
+    padding:5px 0px;
+    box-shadow:5px 0px 15px gray;
+    border-radius: 5px;
+    /* align-items:center; */
+    /* border:1px solid rgb(206, 5, 206); */
+    /* flex-direction: column; */
+}
+.right-l-2{
+    flex:1;
+}
+.right-l-3{
+    flex:.2;
+    /* border:2px solid blue; */
+    box-shadow:5px 5px 10px gray;
+    border-radius: 5px;
+}
+.right-main{
+display:flex;
+/* border:2px solid red; */
+flex:0.8;
+justify-content: space-between;
+height:100%;
+}
+.d-1{
+    width:100px;
+    margin:0px auto;
+    height:10px;
+    border-radius: 5px;
+    background-color:rgb(198, 158, 255);
+}
+.d-2{
+    width:50px;
+    height:10px;
+    border-radius: 5px;
+    background-color:rgb(198, 158, 255);
+}
+.d-3{
+    width:80px;
+    height:10px;
+    border-radius: 5px;
+    background-color:rgb(198, 158, 255);
+}
+.bar-main{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+.right-l-2{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    /* border:2px solid yellow; */
+    box-shadow:5px 0px 15px gray;
+    border-radius: 5px;
+}
+
+
+.right-l-3 ul{
+    list-style:none;
+    margin-left:0px;
+    
+}
+.right-l-3 ul li{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.right-r{
+    flex:.6;
+    /* background-color: purple; */
+    height:100%;
+    position: relative;
+}
+.right-r-1{
+        /* height:80%   ; */
+}
+.video{
+    z-index:-1;
+    margin-top:50px;
+    box-shadow:5px 5px 15px black;
+}
+.material{
+    top :30%;
+    bottom:0;
+    left:0; 
+    right:0;
+    position: absolute;
+    z-index:1;
+    color:white;
+}
+.material p{
+    text-align: center;
+    word-wrap:break-word;
+    /* letter-spacing: 1px; */
+    word-spacing:1px;
+}
+.outline-sec{
+    color:white;
+    background-color: rgb(80, 80, 251);
+
+}
+.outline-pink{
+    color:white;
+    background-color: rgb(80, 80, 251);
+    width:60%;
+    border-radius: 10px;
+
+}

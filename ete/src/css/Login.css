@@ -1,0 +1,269 @@
+* {
+    padding: 0;
+    margin: 0px;
+    /* font-family: 'PT Serif', serif; */
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Square Peg', cursive; */
+    /* box-sizing: border-box; */
+}
+
+.container {
+    display: flex;
+    width: 1000%;
+    height: 500px;
+    justify-items: center;
+    margin: 10% 0%;
+    /* flex-direction: column; */
+    /* perspective: 1000px; */
+    z-index: 10;
+}
+
+.d1 {
+    width: 50%;
+    /* background-color: red; */
+    /* border:5px solid aqua; */
+    border-radius: 5px;
+    /* transition: 3s all; */
+    border-radius: 5px;
+}
+
+
+/* .d1:hover{
+    transform: rotateY(90deg);
+} */
+
+.d1 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.d2 {
+    width: 50%;
+    /* background-color: greenyellow; */
+    /* border:5px solid aqua; */
+    border-radius: 5px;
+    /* transition: 3s all; */
+    background: black;
+    /* margin:20px 0px; */
+}
+
+
+/* .d2:hover{
+    transform: rotateY(-90deg);
+} */
+
+.social {
+    margin-top: 75px;
+    margin-left: 20px;
+}
+
+.btn1 {
+    margin: 0px 0px 10px 5px;
+    background-color: transparent;
+    border: 0px;
+}
+
+.btn1 a {
+    color: black;
+    text-decoration: none;
+}
+
+.social .bi {
+    float: right;
+    margin: 0px 10px;
+}
+
+.info {
+    margin: 5px 10px 10px 5px;
+}
+
+.info input {
+    border-radius: 5px;
+    width: 100%;
+}
+
+.rem {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.subbtn {
+    width: 78%;
+    height: 12%;
+    margin-left: 50px;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 1rem;
+    transition: 3s background-color, font-size;
+}
+
+.subbtn:hover {
+    /* color:yellowgreen; */
+    background-color: #28c9f1;
+    font-size: 1.3rem;
+}
+
+.frgt {
+    float: right;
+}
+
+.link:link {
+    text-decoration: none;
+    color: black;
+}
+
+.link:visited {
+    color: red;
+}
+
+.link:hover {
+    color: orange;
+}
+
+.link1:link {
+    text-decoration: none;
+    color: black;
+}
+
+.link1:visited {
+    color: red;
+}
+
+.link1:hover {
+    color: orange;
+}
+
+.link2:link {
+    text-decoration: none;
+    color: black;
+}
+
+.link2:visited {
+    color: red;
+}
+
+.link2:hover {
+    color: orange;
+}
+
+@media only screen and (max-width:600px) {
+    .user {
+        flex-direction: column;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .social {
+        margin: 10px auto 10px auto;
+    }
+    .d1 {
+        display: none;
+    }
+    .d2 {
+        width: 100%;
+        height: 99%;
+        margin: auto;
+        align-items: center;
+        align-items: center;
+    }
+    .container {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 500px;
+        justify-items: center;
+        margin: auto;
+        align-items: center;
+        /* margin: 10% auto; */
+        /* flex-direction: column; */
+        /* perspective: 1000px; */
+    }
+    .box {
+        height: 350px;
+        width: 50%;
+    }
+    /* .box ::before{
+        width:400%;
+        height:1500px;
+    } */
+    .subbtn {
+        width: 78%;
+        height: 12%;
+        margin-left: 10%;
+        border-radius: 5px;
+        background-color: white;
+    }
+    .social {
+        margin-top: 20px;
+        /* display: flex; */
+        flex-direction: column;
+        margin-left: 20px;
+    }
+    .social div a {
+        margin: 50px auto;
+    }
+}
+::placeholder{
+    text-transform: capitalize;
+}
+
+.label:after {
+    content: '*';
+    color: red;
+}
+
+label {
+    color: white;
+}
+
+.box {
+    position: relative;
+    width: 75%;
+    height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    /* top:50px; */
+    /* left:50px; */
+    /* right:50px; */
+    overflow: hidden;
+    border-radius: 5px;
+    background: #28c9f1;
+}
+
+body {
+    align-items: center;
+    justify-content: center;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    height: 500px;
+    width: 140%;
+    background: linear-gradient(#00ccff, #d400d4);
+    animation: animates 4s linear infinite;
+}
+
+@keyframes animates {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes eample {
+    0% {
+        opacity: "0"
+    }
+    50% {
+        opacity: ".5"
+    }
+    100% {
+        opacity: "1"
+    }
+}
